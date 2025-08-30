@@ -29,8 +29,8 @@
   --green-dark: #5c7377;
   --red: #dd775a;
   --red-dark: #a34d41;
-  --gold: #BD8919;
-  --gold-light: #F4DDAC;
+  --gold: #bd8919;
+  --gold-light: #f4ddac;
 }
 
 body,
@@ -46,6 +46,7 @@ p {
 
 body {
   background-color: var(--color-bg);
+  padding-bottom: 24px;
 }
 
 button {

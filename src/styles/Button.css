@@ -1,0 +1,19 @@
+.lh-button {
+    height: 56px;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    border: 2px solid #384b49;
+    background-color: #f4ddac;
+    color: #a34d41;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+  }
+
+  .lh-button:hover {
+    background-color: #fad587;
+  }

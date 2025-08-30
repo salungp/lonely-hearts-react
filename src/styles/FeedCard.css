@@ -1,0 +1,28 @@
+.lh-feed-card {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #d1d3d9;
+    background-color: #fbf6ec;
+    display: flex !important;
+    text-decoration: none;
+    border-radius: 2px;
+  }
+  
+  .lh-feed-featured {
+    border-color: var(--red);
+  }
+  
+  .lh-feed-card h2 {
+    font-size: 18px;
+    font-family: "Merriweather";
+    margin-bottom: 20px;
+    line-height: 180%;
+  }
+  
+  .lh-small-icon {
+    width: 20px;
+  }
+  
+  .lh-text-special {
+    border-bottom: 2px solid var(--red);
+  }

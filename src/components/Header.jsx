@@ -1,20 +1,35 @@
-import { useRef } from "react";
-import "../styles/Header.css";
-import Logo from "../assets/icons/logo.svg";
-import WeatherIcon from "../assets/icons/sunny.png";
+import { useRef } from "react"
+import { Link } from 'react-router-dom'
+import "../styles/Header.css"
+import Logo from "../assets/icons/logo.svg"
+import WeatherIcon from "../assets/icons/sunny.png"
+import CurrentDate from "./CurrentDate"
+import BackIcon from '../assets/icons/back-button-icon.svg'
 
-function Header() {
-    const dropdownRef = useRef(null);
+function Header({ back, backTo }) {
+  const dropdownRef = useRef(null);
 
   const toggleNavbar = () => {
     dropdownRef.current.classList.toggle("active");
   };
+
+  function BackButton() {
+    return (
+      back && (
+        <Link to={backTo} className="lh-nav-button">
+          <img src={BackIcon} alt="Icon back button" />
+        </Link>
+      )
+    );
+  }
 
   return (
     <>
       <header className="lh-header">
         <div className="container-sm">
           <nav>
+          <BackButton />
+
             <a href="index.html">
               <img src={Logo} alt="Lonely hearts logo heart pixelated" />
               <h2>LONELY HEARTS</h2>
@@ -37,7 +52,7 @@ function Header() {
           </nav>
 
           <div className="lh-sub-header d-flex mt-3 justify-content-between">
-            <h3 id="current-date">FRI 6th Jun 2025</h3>
+          <CurrentDate />
             <div className="d-flex">
               <span>LONDON</span>
               <img src={WeatherIcon} alt="Sunny weather" />
@@ -46,7 +61,7 @@ function Header() {
         </div>
       </header>
     </>
-  );
+  )
 }
 
 export default Header;
