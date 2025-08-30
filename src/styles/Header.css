@@ -1,0 +1,101 @@
+.lh-header nav {
+  position: relative;
+}
+
+/* Hamburger menu */
+.lh-hamburger {
+  display: block;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 16px;
+  top: 9px;
+}
+
+.lh-hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Dropdown menu */
+.lh-dropdown {
+  display: none;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  position: absolute;
+  top: 52px;
+  width: 100%;
+  border: 4px solid var(--green-dark);
+  border-top: none !important;
+  border-radius: 0px 0px 4px 4px;
+  padding: 16px;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.lh-dropdown a {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--green-dark);
+  border-bottom: 2px solid var(--green-dark);
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.lh-dropdown a:hover {
+  background-color: var(--fill);
+}
+
+/* Show dropdown when active */
+.lh-dropdown.active {
+  display: flex;
+}
+
+.lh-header {
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  .lh-header nav a {
+    text-decoration: none;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lh-header nav {
+    height: 56px;
+    width: 100%;
+    background-color: var(--green);
+    border: 4px solid var(--green-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .lh-header nav h2 {
+    font-size: 18px;
+    background-color: none;
+    color: #ffffff;
+    margin-bottom: 0 !important;
+    text-transform: capitalize;
+  }
+  
+  .lh-header nav img {
+    width: 22px;
+    margin-right: 8px;
+  }
+
+  .lh-sub-header h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .lh-sub-header div img {
+    width: 24px;
+  }

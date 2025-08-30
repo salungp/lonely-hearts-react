@@ -13,26 +13,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("assets/font-style.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-a:hover {
-  color: #535bf2;
+
+:root {
+  --color-bg: #fff5df;
+  --fill: #fbf6ec;
+  --dark: #384b49;
+  --placeholder: #d1d3d9;
+  --green: #88a5a0;
+  --green-dark: #5c7377;
+  --red: #dd775a;
+  --red-dark: #a34d41;
+  --gold: #BD8919;
+  --gold-light: #F4DDAC;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "VCR OSD Mono", "font-style", "Arial";
+  background-image: url("paper.png");
+  color: var(--dark);
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  background-color: var(--color-bg);
 }
 
 button {
