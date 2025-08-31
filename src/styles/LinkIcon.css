@@ -1,0 +1,28 @@
+.lh-link-icon {
+    display: flex;
+}
+
+.lh-link-icon .box-icon {
+  width: 56px;
+  height: 48px;
+  border: 2px solid var(--red-dark);
+  background: var(--red);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.lh-link-icon .text-content {
+  flex: 1;
+  height: 48px;
+  display: flex !important;
+  text-decoration: none;
+  background: var(--fill);
+  align-items: center;
+  font-size: 18px;
+  color: var(--dark);
+  text-transform: uppercase;
+  padding: 16px;
+  border: 2px solid var(--placeholder);
+  border-left: none;
+}

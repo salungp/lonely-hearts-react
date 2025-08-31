@@ -1,0 +1,45 @@
+.ad-title {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Merriweather";
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.ad-content {
+  padding: 20px 0;
+  border-top: 2px solid #384b49;
+  border-bottom: 2px solid #384b49;
+}
+
+.ad-content h3 {
+  font-family: "Merriweather";
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+.ad-content p {
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "Merriweather";
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.ad-content .ad-image {
+  width: 156px;
+}
+
+.ad-content .ad-link {
+  font-size: 20px;
+  line-height: 36px;
+  font-family: "Merriweather";
+  text-align: center;
+  display: block;
+  color: #384b49;
+  text-decoration: none;
+}

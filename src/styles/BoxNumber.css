@@ -1,0 +1,16 @@
+.lh-box-no {
+    width: initial !important;
+    height: 36px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: "Merriweather";
+    border: 2px solid var(--dark);
+    margin-bottom: 16px;
+    gap: 6px;
+  }
+  
+  .lh-box-no img {
+    width: 24px;
+  }
