@@ -1,4 +1,5 @@
-import { useState, useRef } from "react"
+import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom"; // ⬅️ Import this
 import '../styles/Input.css'
 import '../styles/PinInput.css'
 import '../styles/Button.css'
@@ -6,57 +7,47 @@ import '../styles/Button.css'
 function PinInput({ length = 5, correctPin = "12345" }) {
   const [values, setValues] = useState(Array(length).fill(""));
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState(null); // {text, type}
+  const [message, setMessage] = useState(null);
   const inputsRef = useRef([]);
+  const navigate = useNavigate(); // ⬅️ useNavigate hook
 
-  // Handle typing
   const handleChange = (e, index) => {
     const val = e.target.value;
 
-    if (!/^\d$/.test(val)) {
-      return; // only allow single digit
-    }
+    if (!/^\d$/.test(val)) return;
 
     const newValues = [...values];
     newValues[index] = val;
     setValues(newValues);
 
-    // Move focus to next input
     if (index < length - 1) {
       inputsRef.current[index + 1].focus();
     }
   };
 
-  // Handle backspace and arrow keys
   const handleKeyDown = (e, index) => {
     if (e.key === "Backspace") {
       const newValues = [...values];
-  
       if (values[index]) {
-        newValues[index] = ""; // clear current field
+        newValues[index] = "";
         setValues(newValues);
       } else if (index > 0) {
-        newValues[index - 1] = ""; // clear previous field
+        newValues[index - 1] = "";
         setValues(newValues);
         inputsRef.current[index - 1].focus();
       }
     }
-  
     if (e.key === "ArrowLeft" && index > 0) {
       inputsRef.current[index - 1].focus();
     }
-  
     if (e.key === "ArrowRight" && index < length - 1) {
       inputsRef.current[index + 1].focus();
     }
-  
     if (e.key === "Enter") {
       handleSubmit();
     }
   };
-  
 
-  // Handle paste event
   const handlePaste = (e, index) => {
     e.preventDefault();
     const pasted = e.clipboardData.getData("text").replace(/\D/g, "");
@@ -74,7 +65,6 @@ function PinInput({ length = 5, correctPin = "12345" }) {
     inputsRef.current[nextIndex].focus();
   };
 
-  // Submit handler
   const handleSubmit = async () => {
     const pin = values.join("");
     if (pin.length !== length) {
@@ -90,11 +80,10 @@ function PinInput({ length = 5, correctPin = "12345" }) {
     if (pin === correctPin) {
       setMessage({ text: "✅ Box found, redirecting...", type: "success" });
       setTimeout(() => {
-        window.location.href = "ad-detail.html";
+        navigate("/ad-detail"); // ⬅️ Redirect with React Router
       }, 1500);
     } else {
       setMessage({ text: "❌ The PIN is incorrect.", type: "danger" });
-      // flash error animation
     }
 
     setLoading(false);
@@ -104,7 +93,6 @@ function PinInput({ length = 5, correctPin = "12345" }) {
 
   return (
     <div>
-      {/* PIN inputs */}
       <div className="pin-container d-flex mb-4">
         {values.map((val, i) => (
           <input
@@ -122,7 +110,6 @@ function PinInput({ length = 5, correctPin = "12345" }) {
         ))}
       </div>
 
-      {/* Submit button */}
       <div className="d-grid gap-2 mb-3">
         <button
           className="lh-button"
@@ -140,7 +127,6 @@ function PinInput({ length = 5, correctPin = "12345" }) {
         </button>
       </div>
 
-      {/* Message */}
       {message && (
         <div className={`alert alert-${message.type} mb-0`}>{message.text}</div>
       )}
