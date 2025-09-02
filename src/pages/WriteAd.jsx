@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import Header from "../components/Header";
 import Textarea from "../components/Textarea";
 import "../styles/Button.css";
 
 function WriteAd() {
+    const navigate = useNavigate()
+
   return (
     <>
       <Header back={true} backTo="/reply"></Header>
@@ -12,7 +15,7 @@ function WriteAd() {
       </div>
       <div className="container-sm">
         <div className="bottom">
-          <button className="lh-button">View message</button>
+          <button className="lh-button" onClick={() => { navigate('/preview') }}>View message</button>
         </div>
       </div>
     </>
