@@ -1,6 +1,6 @@
-# Lonely hearts
+# ❤️ Lonely hearts
 
-This is the react js version of the lonely hearts app mvp. You can access it via https://lonelyhearts.vercel.io
+This is the react js version of the lonely hearts app mvp. You can access it via https://lonelyhearts.vercel.app
 
 Currently, two official plugins are available:
 
