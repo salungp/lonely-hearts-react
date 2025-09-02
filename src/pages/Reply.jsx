@@ -9,7 +9,7 @@ export default function ReplyOptions() {
 
   const handleSubmit = () => {
     if (selected) {
-      navigate("/");
+      navigate('/' + selected);
     } else {
       alert("Please select an option first!");
     }
@@ -19,14 +19,14 @@ export default function ReplyOptions() {
     <>
       <Header back={true} backTo="/ad-detail"></Header>
       <div className="container">
-      <h1 className="lh-title">
+      <h1 className="lh-title mb-3">
             Enter PO Box Number
           </h1>
 
         <RadioOption
           id="one"
           label="I'll write it"
-          value="reply-first.html"
+          value="write-ad"
           selected={selected}
           onChange={setSelected}
         />
@@ -34,7 +34,7 @@ export default function ReplyOptions() {
         <RadioOption
           id="two"
           label="Help me write it"
-          value="reply-second.html"
+          value="help-write-ad"
           selected={selected}
           onChange={setSelected}
         />
