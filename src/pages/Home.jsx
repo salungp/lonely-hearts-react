@@ -19,7 +19,7 @@ function Home() {
 
         <h1 className="lh-title mb-3 text-center">Enter PO Box Number</h1>
 
-        <PinInput length={5} correctPin="12345" />
+        <PinInput length={5} correctPin="12345" button="View message" />
 
         <div className="mb-3"></div>
 

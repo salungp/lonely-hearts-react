@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import Header from "../components/Header";
@@ -15,6 +16,8 @@ function Offer() {
   const [activeItem, setItem] = useState(0);
   const [popup, setPopup] = useState(false);
   const [phone, setPhone] = useState("");
+    const navigate = useNavigate()
+
   useEffect(() => {}, [activeItem]);
 
   const offerItemData = [
@@ -160,7 +163,7 @@ function Offer() {
           </div>
         </div>
 
-        <button className="lh-button">Sign up</button>
+        <button className="lh-button" onClick={() => { navigate('/verify-code') }}>Sign up</button>
       </Popup>
     </>
   );

@@ -38,7 +38,7 @@ function AdDetail() {
         </div>
       </div>
       <div className="bottom d-flex">
-        <Button type="default" color="red" onClick={() => { navigate('/reply') }}>
+        <Button type="default" color="red" onClick={() => { navigate('/offer') }}>
           Reply ad
         </Button>
       </div>

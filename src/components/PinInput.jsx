@@ -4,10 +4,11 @@ import '../styles/Input.css'
 import '../styles/PinInput.css'
 import '../styles/Button.css'
 
-function PinInput({ length = 5, correctPin = "12345" }) {
+function PinInput({ length = 5, correctPin = "12345" , button}) {
   const [values, setValues] = useState(Array(length).fill(""));
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(null);
+  const buttonText = button
   const inputsRef = useRef([]);
   const navigate = useNavigate(); // ⬅️ useNavigate hook
 
@@ -122,7 +123,7 @@ function PinInput({ length = 5, correctPin = "12345" }) {
               Verifying...
             </>
           ) : (
-            "View Message"
+            buttonText
           )}
         </button>
       </div>

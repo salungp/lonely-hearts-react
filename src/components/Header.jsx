@@ -30,7 +30,7 @@ function Header({ back, backTo }) {
           <nav>
           <BackButton />
 
-            <a href="index.html">
+            <a href="#">
               <img src={Logo} alt="Lonely hearts logo heart pixelated" />
               <h2>LONELY HEARTS</h2>
             </a>

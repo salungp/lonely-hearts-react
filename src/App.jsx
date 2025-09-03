@@ -5,6 +5,7 @@ import Reply from './pages/Reply'
 import WriteAd from './pages/WriteAd'
 import Preview from './pages/Preview'
 import Offer from './pages/Offer'
+import VerifyCode from "./pages/VerifyCode"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/write-ad" element={<WriteAd />} />
         <Route path="/preview" element={<Preview />} />
         <Route path='/offer' element={<Offer />} />
+        <Route path='/verify-code' element={<VerifyCode />} />
       </Routes>
     </>
   )
